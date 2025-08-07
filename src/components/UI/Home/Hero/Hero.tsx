@@ -1,5 +1,6 @@
+import Image from 'next/image';
 import React from 'react';
-import { FaLocationArrow } from 'react-icons/fa';
+import { FaApple, FaGooglePlay, FaLocationArrow } from 'react-icons/fa';
 import { GrMapLocation } from 'react-icons/gr';
 
 const Hero = () => {
@@ -12,29 +13,48 @@ const Hero = () => {
                         Taste the <span className='text-pink-600'>Best</span> Food in Town
                     </h1>
                     <p className='text-sm md:text-base font-medium text-gray-800  dark:text-gray-400 mt-4 '>
-                        Discover a variety of delicious meals delivered right to your doorstep. Enjoy the best culinary experiences with us.
+                        Discover a variety of delicious meals delivered right to your doorstep.
                     </p>
                     {/* address input  */}
-                    <div className='w-full mb-8 max-w-md'>
+                    <div className='w-full mb-8 mt-4 max-w-md'>
                         <div className='flex items-center h-14 overflow-hidden bg-gray-100 shadow-md'>
-                             <div className='px-4 text-gray-500'>
-                                <GrMapLocation className='w-5 h-5 text-black'/>
-                             </div>
+                            <div className='px-4 text-gray-500'>
+                                <GrMapLocation className='w-5 h-5 text-black' />
+                            </div>
                             <input
                                 type="text"
                                 placeholder='Enter your address'
                                 className='flex-1 text-sm text-black bg-transparent outline-none h-full '
                             />
-                            <button className='bg-gray-900 text-white hover:text-gray-800 flex items-center justify-center'>
-                                <FaLocationArrow className='w-4 h-4'/>
-                                Find Food
+                            <button className='cursor-pointer bg-gray-900 text-white px-4 h-full hover:text-gray-800 flex items-center justify-center'>
+                                <FaLocationArrow className='w-4 h-4' />
                             </button>
                         </div>
                     </div>
+
+                    <p className='text-gray-700 dark:text-gray-400 text-sm mb-6'>We are available on</p>
+
+                    <div className='flex space-x-4'>
+                        <a href="#_" className='flex items-center group border border-gray-400 px-4 py-3 rounded-md hover:bg-gray-950 transition-all duration-300'>
+                            <FaApple className='text-2xl mr-2 group-hover:text-white transition-all duration-300' />
+                            <div>
+                                <p className='text-xs group-hover:text-white transition-all duration-300'>Download on the</p>
+                                <p className='text-xs font-semibold group-hover:text-white transition-all duration-300'>Apple Store</p>
+                            </div>
+                        </a>
+
+                        <a href="#_" className='flex items-center group border border-gray-400 px-4 py-3 rounded-md hover:bg-gray-950 transition-all duration-300'>
+                            <FaGooglePlay className='text-2xl mr-2 group-hover:text-white transition-all duration-300' />
+                            <div>
+                                <p className='text-xs group-hover:text-white transition-all duration-300'>Download on the</p>
+                                <p className='text-xs font-semibold group-hover:text-white transition-all duration-300'>Google Play</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
                 {/* image content  */}
-                <div className='flex justify-center'>
-                    <img src="/images/hero-image.png" alt="Delicious Food" className='w-full h-auto max-w-md' />
+                <div className=' mx-auto hidden lg:block'>
+                    <Image src="/images/hero.png" alt="Delicious Food"  width={700} height={700}/>
                 </div>
             </div>
         </div>
