@@ -10,7 +10,7 @@ type NavProps = {
     navOpen: () => void;
 };
 
-const Nav = ({navOpen}: NavProps) => {
+const Nav = ({ navOpen }: NavProps) => {
 
     const [navBg, setNavBg] = useState(false);
     useEffect(() => {
@@ -22,20 +22,20 @@ const Nav = ({navOpen}: NavProps) => {
             if (window.scrollY < 90) {
                 setNavBg(false);
             }
+        }
+        window.addEventListener('scroll', handleScroll);
 
-            window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        }
 
-            return () => {
-                window.removeEventListener('scroll', handleScroll);
-            }
-
-        }}, [])
+    }, [])
     return (
         <div className={`transition-all ${navBg ? "bg-white dark:bg-gray-900 shadow-md" : "fixed"} duration-200 h-[12vh] z-[100] fixed w-full`}>
             <div className="flex items-center justify-between w-[90%] xl:w-[80%] h-full mx-auto">
                 <div className="flex items-center space-x-2">
                     <div className="w-10 h-10 bg-blue-950 dark:bg-white  rounded-full flex items-center justify-center flex-col">
-                        <MdDeliveryDining className='w-6 h-6 text-white dark:text-black'/>
+                        <MdDeliveryDining className='w-6 h-6 text-white dark:text-black' />
                     </div>
                     <h1 className="text-xl hidden sm:block md:text-2xl text-black dark:text-white font-bold">BD Food</h1>
                 </div>
@@ -55,11 +55,11 @@ const Nav = ({navOpen}: NavProps) => {
 
                     <button className='bg-blue-950 dark:bg-white dark:text-black dark:hover:bg-gray-200 py-2.5 px-8 text-white font-bold rounded-lg hover:bg-black transition-all duration-300 cursor-pointer'>Join Now</button>
                     <ThemeToggoler />
-                    <HiBars3BottomRight 
-                    onClick={navOpen}
-                    className='w-8 h-8 cursor-pointer text-blue-950 lg:hidden dark:text-white'/>
-            </div> 
+                    <HiBars3BottomRight
+                        onClick={navOpen}
+                        className='w-8 h-8 cursor-pointer text-blue-950 lg:hidden dark:text-white' />
                 </div>
+            </div>
         </div>
     );
 };
