@@ -2,7 +2,7 @@
 
 const Home = () => {
     return (
-        <div>
+        <div className="overflow-hidden h-[2000px]">
             This is the home component
         </div>
     );
