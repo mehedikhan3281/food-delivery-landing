@@ -1,10 +1,12 @@
 import Hero from "./Hero/Hero";
+import Restaurant from "./Restaurant/Restaurant";
 
 
 const Home = () => {
     return (
-        <div className="overflow-hidden h-[2000px]">
+        <div className="overflow-hidden ">
             <Hero/>
+            <Restaurant/>
         </div>
     );
 };
