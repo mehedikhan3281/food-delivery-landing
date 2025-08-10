@@ -1,5 +1,6 @@
 import About from "./About/About";
 import Category from "./Category/Category";
+import Feature from "./Feature/Feature";
 import Hero from "./Hero/Hero";
 import HowItWork from "./HowItWork/HowItWork";
 import Restaurant from "./Restaurant/Restaurant";
@@ -13,6 +14,7 @@ const Home = () => {
             <Category/>
             <HowItWork/>
             <About/>
+            <Feature/>
         </div>
     );
 };
