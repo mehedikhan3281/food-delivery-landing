@@ -1,3 +1,4 @@
+import About from "./About/About";
 import Category from "./Category/Category";
 import Hero from "./Hero/Hero";
 import HowItWork from "./HowItWork/HowItWork";
@@ -11,6 +12,7 @@ const Home = () => {
             <Restaurant/>
             <Category/>
             <HowItWork/>
+            <About/>
         </div>
     );
 };
