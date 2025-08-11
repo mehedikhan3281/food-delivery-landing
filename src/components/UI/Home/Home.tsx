@@ -5,6 +5,7 @@ import ClientReview from "./ClientReview/ClientReview";
 import Feature from "./Feature/Feature";
 import Hero from "./Hero/Hero";
 import HowItWork from "./HowItWork/HowItWork";
+import MobileApp from "./MobileApp/MobileApp";
 import Restaurant from "./Restaurant/Restaurant";
 
 
@@ -18,6 +19,7 @@ const Home = () => {
             <About/>
             <Feature/>
             <ClientReview/>
+            <MobileApp/>
         </div>
     );
 };
