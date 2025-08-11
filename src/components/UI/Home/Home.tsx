@@ -1,5 +1,7 @@
 import About from "./About/About";
 import Category from "./Category/Category";
+import ClientReview from "./ClientReview/ClientReview";
+// import ClientReview from "./ClientReview/ClientReview";
 import Feature from "./Feature/Feature";
 import Hero from "./Hero/Hero";
 import HowItWork from "./HowItWork/HowItWork";
@@ -15,6 +17,7 @@ const Home = () => {
             <HowItWork/>
             <About/>
             <Feature/>
+            <ClientReview/>
         </div>
     );
 };
