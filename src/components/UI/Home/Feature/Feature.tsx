@@ -22,8 +22,9 @@ const Feature = () => {
             data-aos="fade-up"
             data-aos-anchor-placement="top-center"
             data-aos-delay={index * 100}
+            key={index}
           >
-            <FeatureCard key={index} icon={feature.icon} title={feature.title} />
+            <FeatureCard  icon={feature.icon} title={feature.title} />
           </div>
 
         ))}

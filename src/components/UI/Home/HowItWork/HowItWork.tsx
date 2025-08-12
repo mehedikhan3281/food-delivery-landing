@@ -31,7 +31,9 @@ const HowItWork = () => {
           <div
             data-aos="fade-right"
             data-aos-anchor-placement="top-center"
-            data-aos-delay={index * 100}>
+            data-aos-delay={index * 100}
+            key={step.num}
+            >
             <HowItWorkCard key={step.num} {...step} />
           </div>
 
