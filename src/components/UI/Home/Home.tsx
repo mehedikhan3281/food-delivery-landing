@@ -1,3 +1,5 @@
+"use client"
+import { useEffect } from "react";
 import About from "./About/About";
 import Category from "./Category/Category";
 import ClientReview from "./ClientReview/ClientReview";
@@ -7,19 +9,34 @@ import Hero from "./Hero/Hero";
 import HowItWork from "./HowItWork/HowItWork";
 import MobileApp from "./MobileApp/MobileApp";
 import Restaurant from "./Restaurant/Restaurant";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Home = () => {
+    useEffect(() => {
+        const initAOS = async () => {
+            await import('aos');
+            AOS.init({
+                duration: 1000,
+                easing: 'ease',
+                once: true,
+                anchorPlacement: 'top-bottom'
+            })
+        }
+
+        initAOS();
+    }, [])
+
     return (
         <div className="overflow-hidden ">
-            <Hero/>
-            <Restaurant/>
-            <Category/>
-            <HowItWork/>
-            <About/>
-            <Feature/>
-            <ClientReview/>
-            <MobileApp/>
+            <Hero />
+            <Restaurant />
+            <Category />
+            <HowItWork />
+            <About />
+            <Feature />
+            <ClientReview />
+            <MobileApp />
         </div>
     );
 };

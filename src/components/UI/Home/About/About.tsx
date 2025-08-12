@@ -24,7 +24,10 @@ const About = () => {
     <div className='py-16'>
       <div className='w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center'>
         {/* Image */}
-        <div>
+        <div
+          data-aos="fade-right"
+          data-aos-anchor-placement="top-center"
+        >
           <Image
             src='/images/a.png'
             alt='About Us'
@@ -34,7 +37,10 @@ const About = () => {
         </div>
 
         {/* Text Content */}
-        <div>
+        <div
+          data-aos="fade-left"
+          data-aos-anchor-placement="top-center"
+        >
           <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold leading-8 md:leading-12'>
             We deliver the best quality food to your doorstep
           </h1>

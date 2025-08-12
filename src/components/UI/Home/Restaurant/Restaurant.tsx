@@ -18,7 +18,14 @@ const Restaurant = () => {
       {/* Restaurant Grid */}
       <div className="w-[80%] mx-auto grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 mt-14">
         {restaurants.map((restaurant, index) => (
-          <RestaurantCard key={index} {...restaurant} />
+          <div
+            key={index}
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-center"
+            data-aos-delay={index * 100} // 0, 100, 200, etc.
+          >
+            <RestaurantCard {...restaurant} />
+          </div>
         ))}
       </div>
 

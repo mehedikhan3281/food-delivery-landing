@@ -27,8 +27,14 @@ const HowItWork = () => {
     <div className="py-16">
       <h1 className="text-xl sm:text-2xl text-center font-extrabold">How It Works</h1>
       <div className="w-[80%] mx-auto mt-16 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
-        {steps.map((step) => (
-          <HowItWorkCard key={step.num} {...step} />
+        {steps.map((step, index) => (
+          <div
+            data-aos="fade-right"
+            data-aos-anchor-placement="top-center"
+            data-aos-delay={index * 100}>
+            <HowItWorkCard key={step.num} {...step} />
+          </div>
+
         ))}
       </div>
     </div>
